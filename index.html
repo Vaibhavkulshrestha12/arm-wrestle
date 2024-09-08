@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arm Wrestling Championship 3.0</title>
+
+   
+  
+    <link rel="icon" href="./src/assets/Pentaomnia.png">
+
+    
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/tailwind-css/build.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
+
+    <script src="./src/js/app.js"></script>
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://kit.fontawesome.com/815143cb5d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="max-w-[1200px] bg-primary-blueDark mx-auto">
+
+    <nav class="z-[9999] fixed w-full max-w-[1200px] h-auto md:p-2 p-4 px-10 flex flex-row justify-between md:justify-evenly items-center bg-primary-blueDark md:bg-primary-blueDark10 md:backdrop-blur-2xl md:rounded-full md:mt-5"
+        id="mobile-nav">
+        <div class="header-left w-[40px]">
+            <img src="./src/assets/Pentaomnia.png" alt="" class="w-full">
+        </div>
+
+        <button id="mobile-menu-btn block md:hidden"><i onclick="Menu(this)"
+                class='bx bx-menu text-primary-heroWhite text-3xl text-left md:hidden md:text-[0px]'></i></button>
+
+        <ul id="navbar-items" class="hidden flex-col items-center justify-center gap-6 p-6 absolute bg-primary-blue z-[10] left-0 top-[83px] w-full
+                        md:flex md:flex-row md:relative md:top-auto md:left-auto md:bg-transparent md:w-auto">
+            <li>
+                <a href="#home"
+                    class="text-base text-primary-textColor font-Inter hover:text-white duration-150 ease-in-out">About
+                    Event</a>
+            </li>
+            
+            <li>
+                <a href="#guests"
+                    class="text-base text-primary-textColor font-Inter hover:text-white duration-150 ease-in-out">Guests</a>
+            </li>
+            <li>
+                <a href="#partners"
+                    class="text-base text-primary-textColor font-Inter hover:text-white duration-150 ease-in-out">Partners</a>
+            </li>
+           
+            <a href="form.html" class="primary-button mobile block md:hidden">Register Now</a>
+        </ul>
+        <a href="form.html" class="primary-button hidden md:block">Register Now</a>
+    </nav>
+
+
+    <!--  HERO -->
+    <section id="home" class="section flex flex-col justify-center items-center gap-6">
+
+        <img src="./src/assets/hero/glow.png" alt=""
+            class="hidden xl:block z-[-10] absolute left-[11%] top-[10px] w-[600px]">
+
+        <h1 class="text-4xl sm:text-5xl font-bold text-center text-primary-heroWhite pt-[4rem] md:hidden">EVENT 2024
+        </h1>
+        <img src="./src/assets/hero/event_2022.png" alt="" class="max-w-[990px] w-full mt-[10rem] hidden md:block"> 
+       
+        <img src="./src/assets/" alt=""
+            class="hidden md:block absolute w-screen top-[770px] z-[-100]">
+
+        <div class="hero-text-image max-w-[460px] mt-[420px] md:mt-[130px]">
+            <img src="./src/assets/hero/" alt="">
+        </div>
+
+
+        <a href="form.html" id="register-button" class="primary-button mt-4">Register Now</a>
+
+
+    </section>
+
+
+    
+
+    <!--  GUESTS-->
+   <!-- GUESTS-->
+<section id="guests" class="section guests max-w-[1200px]" id="image-carousel">
+    <h1 class="section-title">Our Event</h1>
+
+    <ul class="guests-list flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <li class="guests-card flex flex-col lg:flex-row gap-8 justify-start items-center bg-primary-blue rounded-3xl max-w-[800px] p-6">
+            <div class="guest-photo rounded-full overflow-hidden flex-shrink-0 mb-4 lg:mb-0">
+                <img src="./src/assets/Sai poorna.jpeg" alt="Arm Wrestling Championship 3.0" class="w-40 h-40 object-cover">
+            </div>
+
+            <div class="guest-content p-6 bg-transparent text-primary-textColor">
+                <h2 class="guests-title text-xl font-extrabold text-primary-sectionTitleColor mb-3 tracking-wider">Arm Wrestling Championship 3.0</h2>
+                <p class="text-md text-primary-textColor mb-3 font-Oswald uppercase">📅 Date: September 17th, 2024  
+                    <br>🕚 Time: 10 a.m. - 7 p.m.<br>   
+                    🏟 Venue: Unimall Ground floor
+                    </p>
+                <p class="text-md">
+                    Get ready to flex your muscles and show your strength! Student organization PENTAOMNIA in assistance of ARM WRESTLING CLUB LPU is presenting the biggest ever Panja tournament - "Arm Wrestling Championship 3.0" in LPU🥇, exclusively for LPU students only. It's time to prove that you've got the courage to win it all! 
+                    This is the best opportunity to learn and experience the highest level of Arm Wrestling - in our campus itself by participating in it.
+                    
+                </p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+    
+    
+
+    <!--PARTNER -->
+   
+<!-- Partners Section -->
+<section id="partners" class="section clients">
+    <div class="title flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 mb-[35px] px-6">
+        <h1 class="section-title mb-0">Our Partner</h1>
+        <a href="https://wa.me/919006964216" class="primary-button" target="_blank">Contact Us</a>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8 items-start">
+        <!-- Partner Logos Grid -->
+        <div class="partners-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center w-full lg:w-1/2">
+            <!-- Partner Logo Item -->
+            <div class="partner-item flex flex-col justify-center items-center bg-primary-blue rounded-[3rem] p-4">
+                <a href="https://alephium.org" target="_blank" rel="noopener noreferrer">
+                    <img src="./src/assets/partner/person1.jpg" alt="Alphie Logo 1" class="w-full h-auto">
+                </a>
+            </div>
+            <div class="partner-item flex flex-col justify-center items-center bg-primary-blue rounded-[3rem] p-4">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./src/assets/partner/person1.jpg" alt="Alphie Logo 2" class="w-full h-auto">
+                </a>
+            </div>
+            <div class="partner-item flex flex-col justify-center items-center bg-primary-blue rounded-[3rem] p-4">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./src/assets/partner/person1.jpg" alt="Alphie Logo 3" class="w-full h-auto">
+                </a>
+            </div>
+            <div class="partner-item flex flex-col justify-center items-center bg-primary-blue rounded-[3rem] p-4">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./src/assets/partner/person1.jpg" alt="Alphie Logo 4" class="w-full h-auto">
+                </a>
+            </div>
+            <div class="partner-item flex flex-col justify-center items-center bg-primary-blue rounded-[3rem] p-4">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./src/assets/partner/person1.jpg" alt="Alphie Logo 5" class="w-full h-auto">
+                </a>
+            </div>
+            <div class="partner-item flex flex-col justify-center items-center bg-primary-blue rounded-[3rem] p-4">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./src/assets/partner/person1.jpg" alt="Alphie Logo 6" class="w-full h-auto">
+                </a>
+            </div>
+        </div>
+
+        <!-- Code of Conduct Section -->
+        <div class="code-of-conduct-section flex flex-col gap-8 w-full lg:w-1/2">
+            <div class="code-of-conduct-card flex gap-8 justify-start items-center bg-primary-blue rounded-3xl p-6">
+                <div class="code-of-conduct-content p-6 bg-transparent text-primary-textColor">
+                    <h2 class="text-xl font-extrabold text-primary-sectionTitleColor mb-3 tracking-wider">Perks of Event</h2>
+                    <p class="text-md text-primary-textColor mb-3">Perks:<br>
+                        🏆 Champion of Champions Trophy for the ultimate winner<br>
+                        🏅 Hard copy certificates and medals for all the winners<br>
+                        📜 E-certificates for all participants<br>
+                        
+                     <br>Don't miss the chance to meet our special chief guests from Pro Panja League at the time of grand finale. Our guests are:-
+                        </p>
+                    <ul class="list-disc list-inside text-md text-primary-textColor">
+                        <li> 1. Sanjay Deswal (National Champion)</li>
+                        <li>2. Shiddhaant Kathuria (Asian Medallist)</li>
+                        <li>3. Aabhas Rana (World Champion)</li>
+                        <li>4. Amit Singh (National Champion)</li>
+                        <li>5. Shivam Rajput (National Champion)</li>
+                        <li> 6. Harman Mann (National Champion)</li>
+                        <br>
+                        <li> All are Pro Panja League superstars and plays live on Sony Sports Network.🔥</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+    <!-- FOOTER  -->
+   <footer id="footer" class="section lg:w-full max-w-[1200px] bg-primary-blue text-white py-6">
+    <div class="flex flex-col items-center justify-center gap-6 lg:flex-row lg:justify-between lg:items-start lg:gap-24 px-6">
+
+        <!-- Contact Information -->
+        <div class="flex flex-col items-center lg:items-start">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <p class="text-sm mb-2">Email: <a href="mailto:Pentaomnia@gmail.com" class="hover:underline">Pentaomnia@gmail.com</a></p>
+            <p class="text-sm mb-2">Phone: +91 9006964216</p>
+            <p class="text-sm">Venue: 34 - 213, Lovely Professional University, Punjab, India</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-col items-center lg:items-start">
+            <h2 class="text-2xl font-bold mb-4">Quick Links</h2>
+            <ul class="space-y-2">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#guests" class="hover:underline">Guests</a></li>
+                <li><a href="#partners" class="hover:underline">Partners</a></li>
+            </ul>
+        </div>
+
+        <!-- Signup -->
+        <div class="flex flex-col items-center lg:items-start">
+            <h2 class="text-2xl font-bold mb-4">Pentaomnia</h2>
+            <p class="text-sm mb-2">Join our organisation</p>
+            <div class="flex flex-col gap-2">
+                <input class="py-2 px-4 bg-white text-sm rounded-full w-auto" type="email" name="email" id="news-letter-input" placeholder="abc@gmail.com">
+                <button class="primary-button">Join</button>
+            </div>
+        </div>
+    </div>
+  
+
+    <!-- Copyright and Credit -->
+    <div class="absolute bottom-2 right-4 text-right">
+        <p>&copy; 2024 Pentaomnia. All rights reserved.</p>
+        <p class="mt-1">Created by <a href="https://www.linkedin.com/in/vaibhav-kulshrestha-053924283" target="_blank" class="hover:underline">Vaibhav Kulshrestha</a></p>
+
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>
+
