@@ -9,6 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
+    log_error("Connection failed: " . $conn->connect_error);
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -18,6 +19,7 @@ if (
           $_POST['email'], $_POST['weight'], $_POST['graduation_year'], 
           $_POST['arm'], $_POST['razorpay_payment_id'])
 ) {
+    error_log("Form data received successfully.");
     // Capture form data
     $name = $_POST['name'];
     $registration_number = $_POST['registration_number'];
@@ -27,7 +29,7 @@ if (
     $graduation_year = $_POST['graduation_year'];
     $arm = $_POST['arm'];
     $razorpay_payment_id = $_POST['razorpay_payment_id']; // Payment ID from Razorpay
-
+    error_log("Form data values are: $name, $registration_number, $mobile, $email, $weight, $graduation_year, $arm, $razorpay_payment_id");
     // Prepare and execute the SQL statement
     $stmt = $conn->prepare(
         "INSERT INTO registrations (name, registration_number, mobile, email, weight, graduation_year, arm, razorpay_payment_id) 
@@ -35,23 +37,19 @@ if (
     );
     
     $stmt->bind_param("ssssssss", $name, $registration_number, $mobile, $email, $weight, $graduation_year, $arm, $razorpay_payment_id);
-
+    error_log("Executing SQL statement.");
     // Check if the statement executed successfully
     if ($stmt->execute()) {
-        // Registration successful, redirect to success page
-        header('Location: registration_success.php');
-        exit(); // Ensure no further execution occurs
+        error_log("Registration successful, redirecting to success page.");
+        echo json_encode(['status' => 'success']);
     } else {
-        // Handle errors
         error_log("Error in statement execution: " . $stmt->error);
-        echo "Error: " . $stmt->error;
+        echo json_encode(['status' => 'error', 'message' => $stmt->error]);
     }
-
     $stmt->close();
 } else {
-    // Handle missing data and log it for debugging
     error_log("Error: Missing form data or payment details.");
-    echo "Error: Missing form data or payment details.";
+    echo json_encode(['status' => 'error', 'message' => 'Missing form data or payment details.']);
 }
 
 $conn->close();

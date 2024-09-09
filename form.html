@@ -82,7 +82,7 @@
         }
 
         const armSelect = document.getElementById('arm').value;
-        let amount = 0 * 100; // Set a base amount (e.g., 1000 INR)
+        let amount = 1 * 100;
 
         // Double the amount if 'both' arm is selected
         if (armSelect === 'both') {
@@ -105,13 +105,12 @@
                     method: 'POST',
                     body: formData
                 })
-                .then(response => response.text())
+                .then(response => response.json())
                 .then(data => {
-                    // Check for success or error
-                    if (data.trim() === "success") {
+                    if (data.status === "success") {
                         window.location.href = "registration_success.php";
                     } else {
-                        alert("Error: " + data.trim());
+                        alert("Error: " + data.message);
                     }
                 })
                 .catch(error => {
