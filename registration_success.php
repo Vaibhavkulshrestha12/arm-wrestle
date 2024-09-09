@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
             color: white;
             overflow: hidden;
-            background-color: #10141c; /* Background color */
+            background-color: #10141c; 
         }
 
         .poster-container {
@@ -27,7 +27,7 @@
         }
 
         .popup {
-            background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+            background-color: rgba(0, 0, 0, 0.8); 
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
@@ -58,13 +58,13 @@
     // Show the popup
     popup.style.display = 'block';
     
-    // Hide the popup and redirect after 3 seconds
+    
     setTimeout(function() {
-      popup.style.opacity = '0'; // Fade out effect
+      popup.style.opacity = '0'; 
       setTimeout(function() {
         popup.style.display = 'none'; 
-        window.location.href = "index.html"; // Redirect to index.html
-      }, 500); // Wait for fade-out effect
+        window.location.href = "index.html"; 
+      }, 500); 
     }, 3000);
   }
 </script>
